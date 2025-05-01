@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Stockholm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Café Stockholm</div>
+            <ul class="nav-links">
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#meny">Meny</a></li>
+                <li><a href="#om">Om oss</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="../" class="back-link"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hem" class="hero">
+        <div class="hero-content">
+            <h1>Välkommen till Café Stockholm</h1>
+            <p>Njut av handgjorda bakverk och nymalet kaffe i hjärtat av staden</p>
+            <a href="#meny" class="cta-button">Se vår meny</a>
+        </div>
+    </section>
+
+    <section id="dagens" class="todays-special">
+        <div class="container">
+            <h2>Dagens erbjudande</h2>
+            <div class="special-grid">
+                <div class="special-item">
+                    <div class="badge">Nyhet</div>
+                    <h3>Frukostdeal</h3>
+                    <p>Valfri kaffe & croissant</p>
+                    <span class="price">89kr</span>
+                </div>
+                <div class="special-item">
+                    <div class="badge">Populär</div>
+                    <h3>Luncherbjudande</h3>
+                    <p>Soppa, surdegsbröd & kaffe</p>
+                    <span class="price">115kr</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="meny" class="menu">
+        <div class="container">
+            <h2>Vår meny</h2>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h3>Kaffe</h3>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Cappuccino</h4>
+                            <span class="price">42kr</span>
+                        </div>
+                        <p>Espresso med len mjölkskum</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Latte</h4>
+                            <span class="price">45kr</span>
+                        </div>
+                        <p>Espresso med ångad mjölk</p>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <h3>Bakverk</h3>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Croissant</h4>
+                            <span class="price">35kr</span>
+                        </div>
+                        <p>Nybakad fransk croissant</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Kanelbulle</h4>
+                            <span class="price">32kr</span>
+                        </div>
+                        <p>Klassisk svensk kanelbulle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="om" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Om Café Stockholm</h2>
+                    <p>Sedan 2020 har vi serverat kvalitetskaffe och hembakat bröd till våra gäster. Vi värnar om kvalitet och använder endast de bästa råvarorna i våra bakverk.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-coffee"></i>
+                            <span>Ekologiskt kaffe</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bread-slice"></i>
+                            <span>Hembakat</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Veganska alternativ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Hitta oss</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Storgatan 123<br>Stockholm</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="hours">
+                            <p><strong>Mån-Fre:</strong> 08-18</p>
+                            <p><strong>Lör-Sön:</strong> 10-16</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>08-123 45 67</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Kontakta oss</h2>
+                    <form>
+                        <input type="text" placeholder="Namn" required>
+                        <input type="email" placeholder="E-post" required>
+                        <textarea placeholder="Meddelande" required></textarea>
+                        <button type="submit" class="cta-button">Skicka meddelande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Café Stockholm</div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Café Stockholm. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+</body>
+</html> 

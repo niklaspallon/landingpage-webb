@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bokningssystem</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="loginSection" class="login-container">
+        <h2>Admin Login</h2>
+        <form id="loginForm" class="login-form">
+            <input type="password" id="adminPassword" placeholder="Ange lösenord" required>
+            <button type="submit">Logga in</button>
+        </form>
+    </div>
+
+    <div id="adminSection" style="display: none;">
+        <header class="admin-header">
+            <h1>Bokningsöversikt</h1>
+            <a href="index.html" class="back-link">Tillbaka till bokning</a>
+        </header>
+
+        <div class="date-filter">
+            <label for="dateFilter">Filtrera efter datum:</label>
+            <input type="date" id="dateFilter">
+        </div>
+
+        <table class="bookings-table">
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Tid</th>
+                    <th>Namn</th>
+                    <th>Telefon</th>
+                    <th>Åtgärd</th>
+                </tr>
+            </thead>
+            <tbody id="bookingsTableBody">
+                <!-- Bokningar laddas här dynamiskt -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 

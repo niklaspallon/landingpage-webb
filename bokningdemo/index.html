@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokningssystem Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Supabase client -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-section">
+                <a href="../" class="back-link"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a>
+                <div class="logo">Bokningssystem</div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-wrapper">
+        <div class="split-layout">
+            <!-- Left side with calendar image and intro -->
+            <section class="hero-section">
+                <div class="calendar-background"></div>
+                <div class="hero-content">
+                    <h1>Bokningssystem</h1>
+                    <p class="hero-subtitle">Boka. Hantera. Klart.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Enkelt att använda</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Direktbokning</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Snabb översikt</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Helt anpassningsbart</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right side with booking form -->
+            <main class="booking-section">
+                <div class="booking-header">
+                    <div class="booking-title">
+                        <h2>Boka Tid</h2>
+                        <span class="try-it-text">Testa om du vill!</span>
+                    </div>
+                    <a href="admin.html" class="admin-link">Admin</a>
+                </div>
+
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group personal-info">
+                        <div class="input-group">
+                            <label for="name">Namn</label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Ange ditt namn">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="phone">Telefonnummer</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   placeholder="Ange ditt telefonnummer">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group date-section">
+                        <div class="date-navigation">
+                            <button type="button" id="prevDay" class="nav-button">←</button>
+                            <div class="date-selector">
+                                <label for="date">Välj datum</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <button type="button" id="nextDay" class="nav-button">→</button>
+                        </div>
+                    </div>
+                    
+                    <div id="bookingStatus" class="status-message"></div>
+                    
+                    <div class="form-group time-section">
+                        <label>Välj tid</label>
+                        <div id="timeGrid" class="time-grid"></div>
+                        <input type="hidden" id="selectedTime" name="time" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Boka tid</button>
+                </form>
+                
+                <div id="bookingStatus" class="status-message"></div>
+            </main>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-content">
+            <h2>Inloggning för admin</h2>
+            <div class="info-grid">
+                <div class="info-text">
+                    <h3>Effektiv hantering av bokningar</h3>
+                    <div class="admin-features">
+                        <div class="admin-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Få full översikt över alla bokningar</span>
+                        </div>
+                        <div class="admin-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Filtrera efter datum och tid</span>
+                        </div>
+                        <div class="admin-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Hantera avbokningar smidigt</span>
+                        </div>
+                        <div class="admin-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Administrera systemet med enkelhet</span>
+                        </div>
+                        <div class="admin-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Möjlighet till ytterligare anpassning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-image">
+                    <img src="img/adminex.png" alt="Administrationsvy" class="admin-preview-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Ett flexibelt bokningssystem som kan anpassas efter just dina behov</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

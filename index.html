@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbutveckling för Småföretag</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="img/background.png" as="image">
+    <link rel="preload" href="img/bokningsbilddemo.png" as="image">
+    <link rel="preload" href="img/kafebilddemo.png" as="image">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TryggWebb</div>
+            <ul class="nav-links">
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#tjanster">Tjänster</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#om">Om mig</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hem" class="hero">
+        <div class="hero-image">
+            <img src="img/background.png" alt="Hero Background">
+        </div>
+        <div class="hero-content">
+            <h1>Skräddarsydda hemsidor för småföretag – utan krångel.</h1>
+            <p>Jag utvecklar moderna, mobilanpassade hemsidor och bokningssystem som hjälper dig att nå fler kunder och effektivisera din verksamhet.</p>
+            <a href="#kontakt" class="cta-button">Boka gratis möte</a>
+        </div>
+    </section>
+
+    <section id="tjanster" class="services">
+        <h2>Mina Tjänster</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Skapa ny hemsida</h3>
+                <p>En modern och professionell hemsida som visar ditt företag från sin bästa sida.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Bokningssystem</h3>
+                <p>Smidigt bokningssystem som sparar tid – för både dig och dina kunder.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Uppdatera hemsidor</h3>
+                <p>Modernisera din befintliga hemsida för att nå ut till fler kunder.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img src="img/bokningsbilddemo.png" alt="Bokningssystem">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Bokningssystem</h3>
+                            <p>Ett modernt och användarvänligt bokningssystem för företag</p>
+                            <a href="bokningdemo/" class="portfolio-link">Se demo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="image-container">
+                    <img src="img/kafebilddemo.png" alt="Kafé">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Kafé</h3>
+                            <p>Modern hemsida med meny och kontaktformulär</p>
+                            <a href="kafedemo/" class="portfolio-link">Se demo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="om" class="about">
+        <h2>Om mig</h2>
+        <div class="about-content">
+            <p>Jag gillar att jobba nära småföretagare och hjälpa dem synas online på ett sätt som känns både professionellt och personligt.</p>
+
+<p>Alla hemsidor jag bygger skapas från grunden i kod – utan färdiga mallar – så att du får något som verkligen passar just din verksamhet. Jag använder modern teknik som HTML, CSS, JavaScript och Supabase, vilket ger både flexibilitet och snabbhet.</p>
+
+<p>Oavsett om du behöver en enkel sida för att visa upp ditt företag eller ett bokningssystem som sparar tid i vardagen, ser jag till att det blir lätt att använda – både för dig och dina kunder.</p>
+
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <h2>Kontakta mig</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Namn" required>
+                <input type="email" placeholder="E-post" required>
+                <textarea placeholder="Meddelande" required></textarea>
+                <button type="submit" class="cta-button">Skicke meddelande</button>
+                <p class="response-time">Jag svarar oftast inom 24 timmar.</p>
+            </form>
+            <div class="contact-info">
+                <p>Eller kontakta mig direkt:</p>
+                <p><i class="fas fa-envelope"></i> email@example.com</p>
+                <p><i class="fas fa-phone"></i> +46 70 123 45 67</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TryggWebb. Alla rättigheter förbehållna.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
