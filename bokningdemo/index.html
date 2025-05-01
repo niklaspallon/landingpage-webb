@@ -6,7 +6,11 @@
     <title>Bokningssystem Demo</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Add Supabase client -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+    <script>
+        // Make supabase available globally for our modules
+        window.supabase = supabase;
+    </script>
 </head>
 <body>
     <header>
@@ -138,6 +142,8 @@
         <p>Ett flexibelt bokningssystem som kan anpassas efter just dina behov</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Load environment variables -->
+    <script src="env.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html> 

@@ -53,12 +53,13 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 1rem 2rem;
     max-width: var(--max-width);
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .logo {
@@ -66,12 +67,14 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -86,9 +89,18 @@ nav {
 }
 
 .back-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
 }
 
 .back-link i {
@@ -368,6 +380,16 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        position: relative;
+        background: var(--white);
+        backdrop-filter: none;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
     .nav-links {
         display: none;
     }
