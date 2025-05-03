@@ -42,13 +42,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Header and Navigation */
 header {
     background-color: transparent;
-    box-shadow: none;
     transition: all 0.3s ease;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header.scrolled {
@@ -59,37 +57,22 @@ header.scrolled {
 header.scrolled .logo {
     color: var(--primary-color);
     text-shadow: none;
+    offset: 10%;
 }
 
 @media (max-width: 768px) {
     header {
-        position: relative;
+        position: static;
+    }
+
+    nav {
         background-color: transparent;
-        box-shadow: none;
-        border-bottom: none;
-    }
-
-    header.scrolled {
-        background-color: transparent;
-        box-shadow: none;
-    }
-
-    header .logo {
-        color: var(--text-color);
-        text-shadow: none;
-    }
-
-    header.scrolled .logo {
-        color: var(--text-color);
-        text-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .nav-links {
         display: none;
-    }
-
-    body {
-        padding-top: 0;
     }
 }
 
@@ -97,9 +80,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 .logo {
@@ -166,6 +151,7 @@ header.scrolled .nav-links a {
     width: 100%;
     height: 100%;
     z-index: 1;
+    background-color: #1a1a1a;
 }
 
 .hero-image::after {
@@ -180,13 +166,17 @@ header.scrolled .nav-links a {
         rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.4)
     );
+    z-index: 2;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 40%;
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
@@ -344,27 +334,28 @@ header.scrolled .nav-links a {
 }
 
 .portfolio-item {
-    background: var(--white);
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
     position: relative;
-    aspect-ratio: 16/9;
+    width: 100%;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
 }
 
 .portfolio-item .image-container {
     position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-color: #f0f0f0;
 }
 
 .portfolio-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
 .portfolio-item .overlay {
@@ -392,9 +383,8 @@ header.scrolled .nav-links a {
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(0.7);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: none;
+    filter: none;
 }
 
 .portfolio-item:hover .overlay {
@@ -402,7 +392,7 @@ header.scrolled .nav-links a {
 }
 
 .portfolio-item:hover .content {
-    transform: translateY(0);
+    transform: none;
     opacity: 1;
 }
 
@@ -747,6 +737,36 @@ footer {
         width: 100%;
         font-size: 16px; /* Prevents zoom on iOS */
     }
+
+    .portfolio-item {
+        position: relative;
+    }
+
+    .portfolio-item .mobile-view-btn {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .portfolio-item .overlay,
+    .portfolio-item:hover .overlay,
+    .portfolio-item .content {
+        display: none;
+    }
+
+    .portfolio-item:hover img {
+        transform: none;
+        filter: none;
+    }
 }
 
 /* Animations */
@@ -776,14 +796,101 @@ html {
 /* Prevent content shift during image load */
 .image-container {
     position: relative;
+    width: 100%;
     aspect-ratio: 16/9;
-    background: #f5f5f5;
+    background-color: #f0f0f0;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item .image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #f0f0f0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #1a1a1a;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4)
+    );
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.form-status.success {
+    background: rgba(46, 204, 113, 0.2);
+    color: #fff;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.form-status.error {
+    background: rgba(231, 76, 60, 0.2);
+    color: #fff;
+    border: 1px solid rgba(231, 76, 60, 0.3);
 } 

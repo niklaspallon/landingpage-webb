@@ -124,7 +124,7 @@ body {
 .booking-form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
 }
 
 /* Form Groups */
@@ -547,49 +547,35 @@ input:focus {
 }
 
 /* Add header styles */
-header {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
 }
 
-nav {
-    display: flex;
-    align-items: center;
+.header-content {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
-    padding: 1rem 2rem;
-}
-
-.logo-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 2rem;
-    width: 100%;
+    padding: 0 1rem;
 }
 
 .back-link {
+    color: white;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.back-link:hover {
-    color: var(--accent-color);
-}
-
-.back-link i {
-    font-size: 0.9rem;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.spacer {
+    /* Empty for grid layout */
 } 

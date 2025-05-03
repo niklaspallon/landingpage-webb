@@ -1,6 +1,17 @@
+# Configuration files
+config.js
+
+# Environment files
 .env
 .env.local
 .env.*.local
 node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
 bokningdemo/env.js 

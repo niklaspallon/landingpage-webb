@@ -6,9 +6,9 @@
     <title>Webbutveckling för Småföretag</title>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="img/newback.jpeg?v=1" as="image">
-    <link rel="preload" href="img/bokningsbilddemo.png" as="image">
-    <link rel="preload" href="img/kafebilddemo.png" as="image">
+    <link rel="preload" href="img/newback.jpeg?v=1" as="image" fetchpriority="high">
+    <link rel="preload" href="img/bokningsbilddemo.png" as="image" fetchpriority="low">
+    <link rel="preload" href="img/kafebilddemo.png" as="image" fetchpriority="low">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
@@ -37,7 +37,7 @@
 
     <section id="hem" class="hero">
         <div class="hero-image">
-            <img src="img/newback.jpeg?v=1" alt="Hero Background">
+            <img src="img/newback.jpeg?v=1" alt="Hero Background" fetchpriority="high">
         </div>
         <div class="hero-content">
             <h1>Skräddarsydda hemsidor för småföretag – utan krångel.</h1>
@@ -72,7 +72,7 @@
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <div class="image-container">
-                    <img src="img/bokningsbilddemo.png" alt="Bokningssystem">
+                    <img src="img/bokningsbilddemo.png" alt="Bokningssystem" loading="lazy" decoding="async">
                     <div class="overlay">
                         <div class="content">
                             <h3>Bokningssystem</h3>
@@ -80,11 +80,12 @@
                             <a href="bokningdemo/" class="portfolio-link">Se demo <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
+                    <a href="bokningdemo/" class="mobile-view-btn">Visa</a>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="image-container">
-                    <img src="img/kafebilddemo.png" alt="Kafé">
+                    <img src="img/kafebilddemo.png" alt="Kafé" loading="lazy" decoding="async">
                     <div class="overlay">
                         <div class="content">
                             <h3>Kafé</h3>
@@ -92,6 +93,7 @@
                             <a href="kafedemo/" class="portfolio-link">Se demo <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
+                    <a href="kafedemo/" class="mobile-view-btn">Visa</a>
                 </div>
             </div>
         </div>
@@ -112,17 +114,18 @@
     <section id="kontakt" class="contact">
         <h2>Kontakta mig</h2>
         <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="Namn" required>
-                <input type="email" placeholder="E-post" required>
-                <textarea placeholder="Meddelande" required></textarea>
-                <button type="submit" class="cta-button">Skicke meddelande</button>
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Namn" required>
+                <input type="email" id="email" name="email" placeholder="E-post" required>
+                <textarea id="message" name="message" placeholder="Meddelande" required></textarea>
+                <button type="submit" class="cta-button">Kontakta mig</button>
                 <p class="response-time">Jag svarar oftast inom 24 timmar.</p>
+                <div id="formStatus" class="form-status" style="display: none;"></div>
             </form>
             <div class="contact-info">
                 <p>Eller kontakta mig direkt:</p>
-                <p><i class="fas fa-envelope"></i> email@example.com</p>
-                <p><i class="fas fa-phone"></i> +46 70 123 45 67</p>
+                <p><i class="fas fa-envelope"></i> tryggwebb@gmail.com</p>
+            
             </div>
         </div>
     </section>
@@ -130,6 +133,6 @@
     <footer>
         <p>&copy; 2024 TryggWebb. Alla rättigheter förbehållna.</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="contact.js"></script>
 </body>
 </html>
