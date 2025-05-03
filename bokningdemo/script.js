@@ -1,7 +1,7 @@
 import config from './config.js';
 
 const { supabaseUrl, supabaseKey } = config;
-const client = supabase.createClient(supabaseUrl, supabaseKey);
+const client = supabase.createClient(window.__env.SUPABASE_URL, window.__env.SUPABASE_KEY);
 
 const bookingForm = document.getElementById('bookingForm');
 const dateInput = document.getElementById('date');
