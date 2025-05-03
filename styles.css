@@ -904,4 +904,122 @@ html {
     background: rgba(231, 76, 60, 0.2);
     color: #fff;
     border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Offerings Page Specific Styles */
+.offerings-page {
+    padding: 8rem 2rem 6rem;
+    background-color: var(--white);
+    min-height: calc(100vh - 200px); /* Account for header and footer */
+}
+
+.offerings-page h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offerings-page .offerings-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.offerings-page .intro {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offerings-page .offering-item {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offerings-page .offering-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.offerings-page .offering-item h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.offerings-page .offering-item h2 i {
+    color: var(--primary-light);
+    font-size: 1.8rem;
+}
+
+.offerings-page .offering-item p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.offerings-page .offering-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.offerings-page .offering-item ul li {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+    position: relative;
+    line-height: 1.6;
+}
+
+.offerings-page .offering-item ul li::before {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .offerings-page {
+        padding: 6rem 1rem 4rem;
+    }
+
+    .offerings-page h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .offerings-page .intro {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    .offerings-page .offering-item {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .offerings-page .offering-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .offerings-page .offering-item p,
+    .offerings-page .offering-item ul li {
+        font-size: 1.1rem;
+    }
 } 
