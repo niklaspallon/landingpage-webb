@@ -313,6 +313,20 @@ header.scrolled .nav-links a {
     font-weight: 300;
 }
 
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--primary-light);
+}
+
 /* Portfolio Section */
 .portfolio {
     padding: 8rem 5%;
