@@ -1,3 +1,4 @@
+// Load environment variables
 const getEnvVariable = (key) => {
     // For demo purposes, we'll use window.__env if available (can be set by hosting platform)
     if (typeof window !== 'undefined' && window.__env && window.__env[key]) {
