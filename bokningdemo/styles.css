@@ -396,6 +396,22 @@ input:focus {
     .try-it-text {
         font-size: 0.9rem;
     }
+
+    .back-link {
+        font-size: 1.2rem;
+    }
+
+    .back-link i {
+        margin-right: 0;
+    }
+    
+    .back-link::after {
+        content: '';
+    }
+
+    .back-link .desktop-text {
+        display: none;
+    }
 }
 
 /* Info Section */

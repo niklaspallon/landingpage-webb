@@ -74,7 +74,10 @@ header.scrolled .logo {
     .nav-links {
         display: none;
     }
+
 }
+
+
 
 nav {
     display: flex;
@@ -766,6 +769,14 @@ footer {
     .portfolio-item:hover img {
         transform: none;
         filter: none;
+    }
+
+    .hero .hero-image::after {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.80),
+            rgba(0, 0, 0, 0.80)
+        ) !important;
     }
 }
 

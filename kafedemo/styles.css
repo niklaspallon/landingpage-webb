@@ -408,4 +408,20 @@ footer {
         gap: 1rem;
         text-align: center;
     }
+
+    .back-link span {
+        display: none;
+    }
+    
+    .back-link {
+        font-size: 1.2rem;
+    }
+
+    .back-link i {
+        margin-right: 0;
+    }
+    
+    .back-link::after {
+        content: '';
+    }
 } 
